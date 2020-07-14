@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DriverListActivity">
+    <item
+        android:title="@string/sobre"
+        android:id="@+id/action_about"
+        app:showAsAction="never" />
+
+</menu>

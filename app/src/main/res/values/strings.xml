@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PilotosF1</string>
+    <string name="sobre">Sobre</string>
+    <string name="description_text">Este Aplicativo cria uma lista de pilotos de fórmula 1 registrados em 2019.\nNesta lista contém a biografia de cada piloto, mais o link do <u><font color="#000099">wikipédia</font></u>, possibilitando o acesso a todo conteúdo  dos pilotos para todos os amantes de Fórmula 1.</string>
+    <string name="developer_main">Aplicativo desenvolvido por: \n<b>Eder Alves da Silva</b></string>
+    <string name="wikipedia">Wikipedia</string>
+</resources>
