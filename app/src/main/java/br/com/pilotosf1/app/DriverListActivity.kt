@@ -1,15 +1,23 @@
 package br.com.pilotosf1.app
 
+import android.app.ProgressDialog
 import android.content.Intent
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.os.Handler
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.view.menu.ShowableListMenu
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import java.text.SimpleDateFormat
+import java.time.format.DateTimeFormatter
+import java.util.*
+import kotlin.math.log
 
 class DriverListActivity : AppCompatActivity() {
 
@@ -22,6 +30,13 @@ class DriverListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_driver_list)
 
+        val progressDialog = ProgressDialog(this)
+        progressDialog.setMessage("Atualizando......")
+        progressDialog.setCancelable(false)
+        progressDialog.show()
+
+        Handler().postDelayed({progressDialog.dismiss()}, 3000)
+
         listaPilotos = findViewById(R.id.recycler_drivers)
         listapilotosLayoutManager = LinearLayoutManager(this)
         LinearLayoutManager.VERTICAL
@@ -32,6 +47,7 @@ class DriverListActivity : AppCompatActivity() {
         listaPilotos.adapter = listaPilotosAdapter
 
         getListaPilotos()
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
