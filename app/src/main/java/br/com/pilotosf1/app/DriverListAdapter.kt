@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_drive_list.view.*
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.Unit.toString
 
 class DriverListAdapter(private val listener: (String) -> Unit) : RecyclerView.Adapter<DriverListAdapter.DriverListViewHolder>() {
 
