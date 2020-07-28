@@ -22,10 +22,10 @@ class DriverListAdapter(private val listener: (String) -> Unit) : RecyclerView.A
 
     inner class DriverListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        @SuppressLint("SimpleDateFormat")
+        @SuppressLint("SimpleDateFormat", "SetTextI18n")
         fun define(driver: Driver, listener: (String) -> Unit) {
             with(itemView) {
-                drive_name.text = driver.givenName
+                drive_name.text = driver.givenName + " " + driver.familyName
                 val currentDate: String = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(Date())
                 val date = SimpleDateFormat("yyyy-MM-dd").parse(driver.dateOfBirth)
                 drive_birth.text = SimpleDateFormat("dd/MM/yyyy").format(date)
